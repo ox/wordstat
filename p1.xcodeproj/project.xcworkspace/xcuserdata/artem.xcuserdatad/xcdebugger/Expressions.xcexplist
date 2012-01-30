@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "print_hash_keys_in_lexicongraphical_order:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)arr[3]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "hash_element_add_occurance:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)element-&gt;occurances[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "hash_table_get_all_keys:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)arr[arr_i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "print_hash_element:hash.c">
+      </ContextState>
+      <ContextState
+         contextName = "free_hash_element:hash.c">
+      </ContextState>
+      <ContextState
+         contextName = "compare_hash_tables:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)a-&gt;data-&gt;str">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "sort_hash_elements:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)elements[lowest]-&gt;str">
+            </PersistentString>
+            <PersistentString
+               value = "(char *)elements[k]-&gt;str">
+            </PersistentString>
+            <PersistentString
+               value = "(char *)elements[i]-&gt;str">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "new_hash_element:hash.c">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

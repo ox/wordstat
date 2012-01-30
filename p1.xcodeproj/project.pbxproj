@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC2D3CBD14C71C54005E40FF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3CBC14C71C54005E40FF /* main.c */; };
 		AC2D3CBF14C71C54005E40FF /* p1.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC2D3CBE14C71C54005E40FF /* p1.1 */; };
+		AC2D3CC914C720AD005E40FF /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3CC814C720AD005E40FF /* hash.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,10 @@
 		AC2D3CB814C71C54005E40FF /* p1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = p1; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2D3CBC14C71C54005E40FF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		AC2D3CBE14C71C54005E40FF /* p1.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = p1.1; sourceTree = "<group>"; };
+		AC2D3CC814C720AD005E40FF /* hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
+		AC2D3CCA14C720D3005E40FF /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
+		AC2D3CD314C7B286005E40FF /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
+		ACD30CF514D0A510005E681F /* scrap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = scrap.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +65,12 @@
 		AC2D3CBB14C71C54005E40FF /* p1 */ = {
 			isa = PBXGroup;
 			children = (
-				AC2D3CBC14C71C54005E40FF /* main.c */,
 				AC2D3CBE14C71C54005E40FF /* p1.1 */,
+				AC2D3CBC14C71C54005E40FF /* main.c */,
+				AC2D3CC814C720AD005E40FF /* hash.c */,
+				AC2D3CCA14C720D3005E40FF /* hash.h */,
+				AC2D3CD314C7B286005E40FF /* test.txt */,
+				ACD30CF514D0A510005E681F /* scrap.c */,
 			);
 			path = p1;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC2D3CBD14C71C54005E40FF /* main.c in Sources */,
+				AC2D3CC914C720AD005E40FF /* hash.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,19 +137,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = ansi;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -154,13 +164,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_C_LANGUAGE_STANDARD = ansi;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -173,6 +183,7 @@
 		AC2D3CC314C71C54005E40FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INSTALL_PATH = ./;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -180,6 +191,7 @@
 		AC2D3CC414C71C54005E40FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				INSTALL_PATH = ./;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -203,6 +215,7 @@
 				AC2D3CC414C71C54005E40FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
