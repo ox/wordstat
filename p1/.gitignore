@@ -3,3 +3,7 @@ a.out.dSYM
 hash.o
 main.o
 wordstat.o
+main
+hash.o
+main.o
+wordstat.o
