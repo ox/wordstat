@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC2D3CBD14C71C54005E40FF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3CBC14C71C54005E40FF /* main.c */; };
+		AC2D3CBD14C71C54005E40FF /* wordstat.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3CBC14C71C54005E40FF /* wordstat.c */; };
 		AC2D3CBF14C71C54005E40FF /* p1.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC2D3CBE14C71C54005E40FF /* p1.1 */; };
 		AC2D3CC914C720AD005E40FF /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3CC814C720AD005E40FF /* hash.c */; };
 		ACD924D914DB47D100803A56 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = ACD924D814DB47D100803A56 /* util.c */; };
@@ -27,13 +27,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AC2D3CB814C71C54005E40FF /* p1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = p1; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC2D3CBC14C71C54005E40FF /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		AC2D3CB814C71C54005E40FF /* pa1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pa1; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2D3CBC14C71C54005E40FF /* wordstat.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = wordstat.c; sourceTree = "<group>"; };
 		AC2D3CBE14C71C54005E40FF /* p1.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = p1.1; sourceTree = "<group>"; };
 		AC2D3CC814C720AD005E40FF /* hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hash.c; sourceTree = "<group>"; };
 		AC2D3CCA14C720D3005E40FF /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
 		AC2D3CD314C7B286005E40FF /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
-		ACD30CF514D0A510005E681F /* scrap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = scrap.c; sourceTree = "<group>"; };
+		AC8988DF14DE7EF700013A42 /* wordstat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wordstat.h; sourceTree = "<group>"; };
 		ACD924D614DB475000803A56 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
 		ACD924D814DB47D100803A56 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 		AC2D3CAD14C71C54005E40FF = {
 			isa = PBXGroup;
 			children = (
-				AC2D3CBB14C71C54005E40FF /* p1 */,
+				AC2D3CBB14C71C54005E40FF /* pa1 */,
 				AC2D3CB914C71C54005E40FF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,32 +60,33 @@
 		AC2D3CB914C71C54005E40FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC2D3CB814C71C54005E40FF /* p1 */,
+				AC2D3CB814C71C54005E40FF /* pa1 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AC2D3CBB14C71C54005E40FF /* p1 */ = {
+		AC2D3CBB14C71C54005E40FF /* pa1 */ = {
 			isa = PBXGroup;
 			children = (
 				AC2D3CBE14C71C54005E40FF /* p1.1 */,
-				AC2D3CBC14C71C54005E40FF /* main.c */,
+				AC2D3CBC14C71C54005E40FF /* wordstat.c */,
+				AC8988DF14DE7EF700013A42 /* wordstat.h */,
 				AC2D3CC814C720AD005E40FF /* hash.c */,
 				AC2D3CCA14C720D3005E40FF /* hash.h */,
 				AC2D3CD314C7B286005E40FF /* test.txt */,
-				ACD30CF514D0A510005E681F /* scrap.c */,
 				ACD924D614DB475000803A56 /* util.h */,
 				ACD924D814DB47D100803A56 /* util.c */,
 			);
+			name = pa1;
 			path = p1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC2D3CB714C71C54005E40FF /* p1 */ = {
+		AC2D3CB714C71C54005E40FF /* pa1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC2D3CC214C71C54005E40FF /* Build configuration list for PBXNativeTarget "p1" */;
+			buildConfigurationList = AC2D3CC214C71C54005E40FF /* Build configuration list for PBXNativeTarget "pa1" */;
 			buildPhases = (
 				AC2D3CB414C71C54005E40FF /* Sources */,
 				AC2D3CB514C71C54005E40FF /* Frameworks */,
@@ -95,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = p1;
+			name = pa1;
 			productName = p1;
-			productReference = AC2D3CB814C71C54005E40FF /* p1 */;
+			productReference = AC2D3CB814C71C54005E40FF /* pa1 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +109,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = AC2D3CB214C71C54005E40FF /* Build configuration list for PBXProject "p1" */;
+			buildConfigurationList = AC2D3CB214C71C54005E40FF /* Build configuration list for PBXProject "pa1" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -120,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC2D3CB714C71C54005E40FF /* p1 */,
+				AC2D3CB714C71C54005E40FF /* pa1 */,
 			);
 		};
 /* End PBXProject section */
@@ -130,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2D3CBD14C71C54005E40FF /* main.c in Sources */,
+				AC2D3CBD14C71C54005E40FF /* wordstat.c in Sources */,
 				AC2D3CC914C720AD005E40FF /* hash.c in Sources */,
 				ACD924D914DB47D100803A56 /* util.c in Sources */,
 			);
@@ -190,7 +191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INSTALL_PATH = ./;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = pa1;
 			};
 			name = Debug;
 		};
@@ -198,14 +199,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INSTALL_PATH = ./;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = pa1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC2D3CB214C71C54005E40FF /* Build configuration list for PBXProject "p1" */ = {
+		AC2D3CB214C71C54005E40FF /* Build configuration list for PBXProject "pa1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC2D3CC014C71C54005E40FF /* Debug */,
@@ -214,7 +215,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC2D3CC214C71C54005E40FF /* Build configuration list for PBXNativeTarget "p1" */ = {
+		AC2D3CC214C71C54005E40FF /* Build configuration list for PBXNativeTarget "pa1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC2D3CC314C71C54005E40FF /* Debug */,

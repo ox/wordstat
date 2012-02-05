@@ -8,25 +8,18 @@
 
 #define CHUNK_SIZE 4096
 #define TABLE_SIZE 1021
-#define XCODE_TEST
 
 int main (int argc, const char * argv[])
 {
-#ifndef XCODE_TEST
     if(argc == 0 || strcmp(argv[1], "-h") == 0) {
         print_help();
         return 0;
     }
-#endif
 
     hash_table* table = new_hash_table(TABLE_SIZE);
 
     FILE *inFile;
-#ifndef XCODE_TEST
     inFile = fopen(argv[1], "r");
-#else
-    inFile = fopen("/Users/artem/code/c/p1/p1/test.txt", "r");
-#endif
     if(!inFile) {
         printf("couldn't open \"%s\"\nmaybe it doesn't exist\n", argv[1]);
         return 0;
@@ -39,7 +32,7 @@ int main (int argc, const char * argv[])
     char * buffer = (char *)calloc(CHUNK_SIZE, sizeof(char));
     char * leftover = (char *)calloc(CHUNK_SIZE * 2, sizeof(char));
     char * leftover_start = leftover;
-    int leftover_size = CHUNK_SIZE * 2 * sizeof(char);
+    /* int leftover_size = CHUNK_SIZE * 2 * sizeof(char); */
     char *last_word;
     if(buffer == NULL) fputs("could not allocate memory for buffer", stderr);
     
