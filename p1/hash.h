@@ -41,6 +41,7 @@ int lua_hash(char *str);
 hash_table* new_hash_table(int size);
 void hash_table_store(hash_table* table, char *str, hash_element* val);
 hash_element* hash_table_get(hash_table* table, char *str);
+int hash_table_remove(hash_table *table, char *str);
 char** hash_table_get_all_keys(hash_table *table);
 
 #endif

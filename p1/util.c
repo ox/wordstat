@@ -29,3 +29,7 @@ char * remove_numbers_from_front(char *string) {
     for(k = strlen(string) - i; k < strlen(string); k++) string[k] = '\0';
     return string;
 }
+
+void print_help(void) {
+    printf("wordstat\nusage:\n\twordstat <file>\t\t<file> is the path to the file which is to be parsed\n");
+}

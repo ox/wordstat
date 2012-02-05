@@ -3,5 +3,6 @@
 
 char *strtolower(char* string);
 char * remove_numbers_from_front(char *string);
+void print_help(void);
 
 #endif

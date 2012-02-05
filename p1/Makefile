@@ -1,6 +1,9 @@
 wordstat: util.o hash.o main.c
 	gcc -o wordstat util.o hash.o main.c
 
+wordstat_debug: util.o hash.o main.c
+	gcc -g -o wordstat util.c hash.c main.c
+
 util.o: util.c
 	gcc -c util.c
 

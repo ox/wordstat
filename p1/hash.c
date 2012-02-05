@@ -104,7 +104,7 @@ hash_table* new_hash_table(int size) {
 
     table->key_num = size;
     table->key_alloc = 0;
-    table->storage = (node **)malloc(size * sizeof(node *));
+    table->storage = (node **)calloc(1, size * sizeof(node *));
 
     if(table->storage == NULL) {
         fprintf(stderr, "no memory while allocating table->store\n");
@@ -146,14 +146,13 @@ void print_hash_keys_in_lexicongraphical_order(hash_table *table){
     int i;
     for(i = 0; i < table->key_alloc; i++) {
         hash_element *tmp = hash_table_get(table, arr[i]);
-        printf("%s", tmp->str);
+        fprintf(stdout,"%s", tmp->str);
         int k;
         const int num = 6 - strlen(tmp->str) / 4;
-        for(k = 0; k < num; k++)
-            printf("\t");
+        for(k = 0; k < num; k++) fprintf(stdout,"\t");
 
-        printf("%i\t%i\n", tmp->count, tmp->case_sensitive_occurances);
-        tmp = NULL;
+        fprintf(stdout,"%i\t%i\n", tmp->count, tmp->case_sensitive_occurances);
+        tmp = NULL;;
     }
 
     for(i = 0; i < table->key_alloc; i++)
@@ -226,7 +225,7 @@ hash_element* hash_table_get(hash_table* table, char *str) {
         return NULL;
     } else {
         /* get the first node*/
-        node *tmp = table->storage[hash%table->key_num];
+        node *tmp = (node *)table->storage[hash%table->key_num];
         if(!tmp->next) /* if it has no followers, it must be the only node in the list */
             return tmp->data;
 
@@ -234,10 +233,38 @@ hash_element* hash_table_get(hash_table* table, char *str) {
         while((tmp = tmp->next) != NULL)
             if(strcmp(table->storage[hash%table->key_num]->data->str, str)==0)
                 return table->storage[hash%table->key_num]->data;
-        
-        printf("is the issue here?\n");
     }
     return NULL;
+}
+
+int hash_table_remove(hash_table *table, char *str) {
+    int hash = lua_hash(str);
+    if(table->storage[hash%table->key_num]) {
+        node *head = table->storage[hash%table->key_num], *prev = NULL;
+        while(head != NULL) {
+            if(strcmp(head->data->str, str) == 0) {
+                if(head->next == NULL) {
+                    free_hash_element(head->data);
+                    free(head);
+                } else if(prev) {
+                    prev->next = head->next;
+                    free_hash_element(head->data);
+                    free(head);
+                    table->storage[hash%table->key_num] = prev;
+                } else {
+                    free_hash_element(head->data);
+                    free(head);
+                    table->storage[hash%table->key_num] = NULL;
+                }
+                return 0;
+            }
+            prev = head;
+            head = head->next;
+        }
+        return 0;
+    } else {
+        return 1;
+    }
 }
 
 /*  func: hash_table_get_all_keys(table)
@@ -246,7 +273,7 @@ hash_element* hash_table_get(hash_table* table, char *str) {
     hash_element pointers (hash_element **). 
  */
 char ** hash_table_get_all_keys(hash_table *table) {
-    char ** arr = (char **)malloc(table->key_alloc * sizeof(char *));
+    char ** arr = (char **)calloc(1, table->key_alloc * sizeof(char *));
 
     int i, arr_i = -1;
     for(i = 0; i < table->key_num; i++) {

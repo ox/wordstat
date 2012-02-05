@@ -6,37 +6,29 @@
          contextName = "hash_table_get_all_keys:hash.c">
          <PersistentStrings>
             <PersistentString
+               value = "table-&gt;storage[i]">
+            </PersistentString>
+            <PersistentString
                value = "(char *)arr[arr_i]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "main:main.c">
+         contextName = "free_hash_element:hash.c">
       </ContextState>
       <ContextState
-         contextName = "hash_element_add_occurance:hash.c">
+         contextName = "new_hash_table:hash.c">
+      </ContextState>
+      <ContextState
+         contextName = "sort_strings:hash.c">
          <PersistentStrings>
             <PersistentString
-               value = "(char *)element-&gt;occurances[i]">
+               value = "arr[lowest]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "new_hash_element:hash.c">
-      </ContextState>
-      <ContextState
-         contextName = "print_hash_element:hash.c">
-      </ContextState>
-      <ContextState
-         contextName = "free_hash_element:hash.c">
-      </ContextState>
-      <ContextState
-         contextName = "compare_hash_tables:hash.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "(char *)a-&gt;data-&gt;str">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "hash_table_store:hash.c">
@@ -47,7 +39,48 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "new_hash_table:hash.c">
+         contextName = "hash_element_add_occurance:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)element-&gt;occurances[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__inline_strcat_chk:_string.h">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "hash_table_get(table, leftover)">
+            </PersistentString>
+            <PersistentString
+               value = "sizeof(char) * ((int)pm.rm_eo - (int)pm.rm_so + 1)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "hash_table_remove:hash.c">
+      </ContextState>
+      <ContextState
+         contextName = "print_hash_keys_in_lexicongraphical_order:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)arr[i]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "print_hash_element:hash.c">
+      </ContextState>
+      <ContextState
+         contextName = "compare_hash_tables:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)a-&gt;data-&gt;str">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "sort_hash_elements:hash.c">
@@ -60,14 +93,6 @@
             </PersistentString>
             <PersistentString
                value = "(char *)elements[i]-&gt;str">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "print_hash_keys_in_lexicongraphical_order:hash.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "(char *)arr[i]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
