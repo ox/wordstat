@@ -21,7 +21,6 @@ typedef struct node {
 } node;
 
 typedef struct hash_table {
-    int size;
     int key_num;
     int key_alloc;
     node ** storage;
@@ -29,6 +28,7 @@ typedef struct hash_table {
 
 /* hash_element helpers */
 hash_element* new_hash_element(char *str);
+void free_hash_element(hash_element *element);
 int hash_element_add_occurance(hash_element *element, char *str);
 
 /* hash table helpers */

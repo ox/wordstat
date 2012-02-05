@@ -10,6 +10,7 @@
 		AC2D3CBD14C71C54005E40FF /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3CBC14C71C54005E40FF /* main.c */; };
 		AC2D3CBF14C71C54005E40FF /* p1.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC2D3CBE14C71C54005E40FF /* p1.1 */; };
 		AC2D3CC914C720AD005E40FF /* hash.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2D3CC814C720AD005E40FF /* hash.c */; };
+		ACD924D914DB47D100803A56 /* util.c in Sources */ = {isa = PBXBuildFile; fileRef = ACD924D814DB47D100803A56 /* util.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,8 @@
 		AC2D3CCA14C720D3005E40FF /* hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash.h; sourceTree = "<group>"; };
 		AC2D3CD314C7B286005E40FF /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 		ACD30CF514D0A510005E681F /* scrap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = scrap.c; sourceTree = "<group>"; };
+		ACD924D614DB475000803A56 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		ACD924D814DB47D100803A56 /* util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				AC2D3CCA14C720D3005E40FF /* hash.h */,
 				AC2D3CD314C7B286005E40FF /* test.txt */,
 				ACD30CF514D0A510005E681F /* scrap.c */,
+				ACD924D614DB475000803A56 /* util.h */,
+				ACD924D814DB47D100803A56 /* util.c */,
 			);
 			path = p1;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			files = (
 				AC2D3CBD14C71C54005E40FF /* main.c in Sources */,
 				AC2D3CC914C720AD005E40FF /* hash.c in Sources */,
+				ACD924D914DB47D100803A56 /* util.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

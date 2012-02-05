@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "print_hash_keys_in_lexicongraphical_order:hash.c">
+         contextName = "hash_table_get_all_keys:hash.c">
          <PersistentStrings>
             <PersistentString
-               value = "(char *)arr[3]">
+               value = "(char *)arr[arr_i]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -22,12 +22,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "hash_table_get_all_keys:hash.c">
-         <PersistentStrings>
-            <PersistentString
-               value = "(char *)arr[arr_i]">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "new_hash_element:hash.c">
       </ContextState>
       <ContextState
          contextName = "print_hash_element:hash.c">
@@ -44,6 +39,17 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "hash_table_store:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "hash%table-&gt;key_num">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "new_hash_table:hash.c">
+      </ContextState>
+      <ContextState
          contextName = "sort_hash_elements:hash.c">
          <PersistentStrings>
             <PersistentString
@@ -58,7 +64,12 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "new_hash_element:hash.c">
+         contextName = "print_hash_keys_in_lexicongraphical_order:hash.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "(char *)arr[i]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>
