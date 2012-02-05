@@ -277,7 +277,7 @@ char ** hash_table_get_all_keys(hash_table *table) {
 
     int i, arr_i = -1;
     for(i = 0; i < table->key_num; i++) {
-        if(table->storage[i]) {
+        if(table->storage[i] != NULL) {
             node *curr_node = table->storage[i];
             arr_i += 1;
             arr[arr_i] = curr_node->data->str;

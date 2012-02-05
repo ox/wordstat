@@ -6,8 +6,8 @@
 #include "hash.h"
 #include "util.h"
 
-#define CHUNK_SIZE 1024
-#define TABLE_SIZE 1024
+#define CHUNK_SIZE 4096
+#define TABLE_SIZE 1021
 #define XCODE_TEST
 
 int main (int argc, const char * argv[])
@@ -69,22 +69,25 @@ int main (int argc, const char * argv[])
             strcpy(lowered, word);
             strtolower(lowered);
             
-            hash_element *tmp = hash_table_get(table, lowered);
-            if(tmp) {
-                hash_element_add_occurance(tmp, word);
-            } else {
-                hash_table_store(table, lowered, new_hash_element(word));
-            }
-            
             error = regexec(&regex, leftover += pm.rm_eo , 1, &pm, REG_NOTBOL);
             last_word = word;
+            
+            if(error != 0 && file_size - consumed > CHUNK_SIZE) {
+                strlcpy(leftover, last_word, sizeof(char) * (strlen(last_word) + 1));
+            } else {
+                hash_element *tmp = hash_table_get(table, lowered);
+                if(tmp) {
+                    hash_element_add_occurance(tmp, word);
+                } else {
+                    hash_table_store(table, lowered, new_hash_element(word));
+                }
+            }
+            
             free(lowered);
             free(word);
         }
         
         leftover = leftover_start;
-        strlcpy(leftover, last_word, sizeof(char) * (strlen(last_word) + 1));
-        
         consumed += sizeof(char) * CHUNK_SIZE;
     }
     regfree(&regex);
